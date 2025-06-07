@@ -1,0 +1,45 @@
+@use '../../styles/variables';
+
+.not_found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: variables.$primary_color;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    h2 {
+      font-size: 96px;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    @media (min-width: variables.$mobileBreak) {
+      h2 {
+        font-size: 288px;
+      }
+      p {
+        font-size: 36px;
+      }
+    }
+  }
+
+  a {
+    margin-top: 3rem;
+    font-size: 14px;
+    color: inherit;
+
+    @media (min-width: variables.$mobileBreak) {
+      font-size: 18px;
+    }
+  }
+}
