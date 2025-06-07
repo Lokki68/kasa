@@ -1,5 +1,8 @@
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Layout from "./Components/Layout/index.jsx";
+import Home from "./Pages/Home/index.jsx";
+import About from "./Pages/About/index.jsx";
+import NotFound from "./Pages/NotFound/index.jsx";
 
 function App() {
 
@@ -7,7 +10,11 @@ function App() {
     <>
       <BrowserRouter>
         <Layout>
-
+            <Routes>
+                <Route path='/' element={<Home/>}  />
+                <Route path='/about' element={<About/>}  />
+                <Route path='*' element={<NotFound/>}  />
+            </Routes>
         </Layout>
       </BrowserRouter>
 
