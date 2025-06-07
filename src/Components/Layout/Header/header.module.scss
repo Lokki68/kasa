@@ -1,0 +1,55 @@
+@use '../../../styles/variables';
+
+@mixin navItem {
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 .5rem;
+  border-bottom: 2px solid transparent;
+  transition: all .3s ease-in-out;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin: 20px;
+  height: 68px;
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    white-space: nowrap;
+    color: variables.$primary_color;
+
+    .navItem {
+      @include navItem;
+    }
+
+    .navItemActive {
+      @include navItem;
+      text-decoration: underline;
+    }
+
+    @media screen and (min-width: variables.$mobileBreak) {
+      margin: 40px 100px;
+
+      .navItem,
+      .navItemActive {
+        margin: 0 1rem;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.headerLogo {
+  height: 47px;
+  width: 145px;
+
+  @media screen and (max-width: variables.$mobileBreak) {
+    height: 68px;
+    width: 210px;
+  }
+}
