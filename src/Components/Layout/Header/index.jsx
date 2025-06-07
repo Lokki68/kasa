@@ -1,5 +1,5 @@
 import Styles from './header.module.scss'
-import kasa_logo from '../../../../public/kasa_logo.svg'
+import kasa_logo from '../../../assets/kasa_logo.svg'
 import {NavLink, useLocation} from "react-router-dom";
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
 
     return (
         <header className={Styles.header}>
-            <img src={kasa_logo} alt="Kasa Logo" className={Styles.headerLogo}/>
+            <img src={kasa_logo} alt="Kasa Logo" className={Styles.headerLogo} loading='lazy'/>
             <nav>
                 <NavLink
                     to='/'
