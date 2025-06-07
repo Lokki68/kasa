@@ -1,0 +1,41 @@
+@use '../../styles/variables';
+
+.collapseContainer {
+  max-width: 1023px;
+  min-width: 335px;
+  margin: 20px auto;
+  transition: all .3s ease-in-out;
+
+  .collapseBar {
+    padding: 10px 15px;
+    margin: 0 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: variables.$primary_color;
+    color: #fff;
+    cursor: pointer;
+
+    .close {
+      rotate: 90deg;
+    }
+
+    .open {
+      rotate: -90deg;
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .collapseContent {
+    padding: 20px 15px 15px;
+    border-radius: 0 0 5px 5px;
+    margin: 0 20px;
+    height: auto;
+    background-color: variables.$grey_color;
+    color: variables.$primary_color;
+  }
+}
