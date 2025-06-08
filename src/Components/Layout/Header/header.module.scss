@@ -3,9 +3,8 @@
 @mixin navItem {
   text-decoration: none;
   color: inherit;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
-  margin: 0 .5rem;
   border-bottom: 2px solid transparent;
   transition: all .3s ease-in-out;
 }
@@ -14,17 +13,22 @@
   display: flex;
   justify-content: space-between;
   align-items:center;
-  margin: 20px;
   height: 68px;
+  margin: 20px;
 
   nav {
     display: flex;
     justify-content: space-around;
     white-space: nowrap;
     color: variables.$primary_color;
+    gap: 1rem;
 
     .navItem {
       @include navItem;
+
+      @media (min-width: variables.$mobileBreak) {
+        font-size: 24px;
+      }
     }
 
     .navItemActive {
@@ -33,14 +37,17 @@
     }
 
     @media screen and (min-width: variables.$mobileBreak) {
-      margin: 40px 100px;
+      gap: 2rem;
 
       .navItem,
       .navItemActive {
-        margin: 0 1rem;
         font-size: 24px;
       }
     }
+  }
+
+  @media (min-width: variables.$mobileBreak) {
+    margin: 20px 100px;
   }
 }
 
@@ -48,7 +55,7 @@
   height: 47px;
   width: 145px;
 
-  @media screen and (max-width: variables.$mobileBreak) {
+  @media (min-width: variables.$mobileBreak) {
     height: 68px;
     width: 210px;
   }

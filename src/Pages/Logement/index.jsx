@@ -3,6 +3,7 @@ import logements from '../../Data/logements.json'
 import Styles from './logement.module.scss'
 import Carrousel from "../../Components/Logement/Carrousel/index.jsx";
 import LogementHeader from "../../Components/Logement/LogementHeader/index.jsx";
+import Collapse from "../../Components/Collapse/index.jsx";
 
 const Logement = () => {
     const params = useParams()
@@ -26,6 +27,16 @@ const Logement = () => {
         <div className={Styles.logementContainer} >
             <Carrousel pictures={logement.pictures} />
             <LogementHeader title={logement.title} location={logement.location} host={logement.host} tags={logement.tags} stars={logement.rating}  />
+            <div className={Styles.detailContainer}>
+                <Collapse title='Description' open={true} content={logement.description} />
+                <Collapse title='Equipement' >
+                    {
+                        logement.equipments.map((item, index) => <p key={index}>{item}</p>)
+                    }
+                </Collapse>
+
+
+            </div>
         </div>
     );
 };
