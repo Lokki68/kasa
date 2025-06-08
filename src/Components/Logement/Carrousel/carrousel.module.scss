@@ -1,0 +1,71 @@
+@use '../../../styles/variables';
+
+.carrouselContainer {
+  position: relative;
+  width: 100%;
+  height: 255px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .actionsContainer {
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    color: #fff;
+
+    svg {
+      height: 24px;
+      opacity: .5;
+
+      &:hover {
+        opacity: .8;
+        cursor: pointer;
+      }
+
+      @media (min-width: variables.$mobileBreak) {
+        height: 78px;
+      }
+    }
+  }
+
+  .numberContainer {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+
+    @media (min-width: variables.$mobileBreak) {
+      display: block;
+    }
+  }
+
+  .carrouselPicture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: variables.$mobileBreak) {
+    height: 415px;
+  }
+}
