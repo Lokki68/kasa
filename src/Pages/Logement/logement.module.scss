@@ -1,0 +1,41 @@
+@use '../../styles/variables';
+
+.logementContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+
+  @media (min-width: variables.$mobileBreak) {
+    padding: 100px;
+  }
+}
+
+
+.logementNotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  h2 {
+    text-align:center;
+    font-size: 48px;
+    color: variables.$primary_color;
+
+    @media (min-width: variables.$mobileBreak) {
+      font-size: 100px;
+    }
+  }
+
+  a {
+    margin-top: 3rem;
+    color: variables.$primary_color;
+    font-size: 14px;
+
+    @media (min-width: variables.$mobileBreak) {
+      font-size: 18px;
+    }
+  }
+}

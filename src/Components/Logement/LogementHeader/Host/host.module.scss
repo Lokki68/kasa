@@ -1,0 +1,47 @@
+@use '../../../../styles/variables';
+
+.hostContainer {
+  display: flex;
+  color: variables.$primary_color;
+  gap: 1rem;
+
+
+  .nameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 32px;
+
+    p {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    @media (min-width: variables.$mobileBreak) {
+      height: 64px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .pictureContainer {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (min-width: variables.$mobileBreak) {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use '../../styles/variables';
+
+.galleryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media (min-width: variables.$mobileBreak) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background: variables.$grey_color;
+    margin: 10px 100px;
+    padding: 50px;
+  }
+}
