@@ -8,7 +8,7 @@ import {aboutData} from "../../Data/about_data.js";
 const About = () => {
     return (
         <div>
-            <Banner picture={about_picture} />
+            <Banner picture={about_picture} height />
             {
                 aboutData.map((item, index) => (
                     <Collapse key={index} title={item.title} content={item.content} open={index === 0} />
