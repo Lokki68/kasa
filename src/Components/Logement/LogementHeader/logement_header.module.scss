@@ -21,6 +21,7 @@
 
     @media (min-width: variables.$mobileBreak) {
       flex-direction: column-reverse;
+      align-items: flex-end;
       gap: 1rem;
     }
 
